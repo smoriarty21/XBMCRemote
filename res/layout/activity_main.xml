@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="stop"
+        android:layout_marginBottom="16dp"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stop"
+        android:layout_centerHorizontal="true"
+        android:onClick="playButtonClick"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/skipUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/play"
+        android:layout_alignParentRight="true"
+        android:onClick="skipUp"
+        android:text="->|" />
+
+    <Button
+        android:id="@+id/skipDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/play"
+        android:layout_alignParentLeft="true"
+        android:onClick="skipDown"
+        android:text="|&lt;-" />
+
+    <Button
+        android:id="@+id/fastForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/skipUp"
+        android:layout_alignBottom="@+id/skipUp"
+        android:layout_toLeftOf="@+id/skipUp"
+        android:onClick="fastForward"
+        android:text="FF" />
+
+    <Button
+        android:id="@+id/rewind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/play"
+        android:layout_toLeftOf="@+id/stop"
+        android:onClick="rewind"
+        android:text="RW" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/rewind"
+        android:onClick="home"
+        android:text="H" />
+
+    <Button
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/fastForward"
+        android:onClick="power"
+        android:text="P" />
+
+    <Button
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/power"
+        android:layout_centerHorizontal="true"
+        android:onClick="up"
+        android:text="Up" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/up"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/rewind"
+        android:onClick="enter"
+        android:text="Enter" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enter"
+        android:layout_alignBottom="@+id/enter"
+        android:layout_toRightOf="@+id/play"
+        android:onClick="right"
+        android:text="Right" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enter"
+        android:layout_alignBottom="@+id/enter"
+        android:layout_toLeftOf="@+id/play"
+        android:onClick="left"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="down"
+        android:text="Down" />
+
+    <Button
+        android:id="@+id/volumeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/down"
+        android:layout_alignBottom="@+id/down"
+        android:layout_alignRight="@+id/right"
+        android:onClick="volumeUp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/left"
+        android:layout_below="@+id/down"
+        android:layout_marginRight="17dp"
+        android:onClick="mute"
+        android:text="Mute" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/volumeUp"
+        android:layout_alignTop="@+id/mute"
+        android:text="Volume"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/volumeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:onClick="volumeDown"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/settings"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="settings"
+        android:layout_toRightOf="@+id/volumeDown"
+        android:text="S" />
+
+</RelativeLayout>
